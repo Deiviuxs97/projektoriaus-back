@@ -28,5 +28,7 @@ mongoose.connect(
 );
 
 // set up routes
+const allLanguages = require("./routes/languages");
 
 app.use("/send", require("./mail"));
+app.use("/", allLanguages);
